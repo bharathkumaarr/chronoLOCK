@@ -4,6 +4,7 @@ const dotenv= require('dotenv')
 const mongoose=require('mongoose')
 
 const authRoutes = require('./routes/authRoutes')
+const capsuleRoutes = require('./routes/chronoLock.routes')
 
 
 dotenv.config()
@@ -39,5 +40,8 @@ app.get('/', (req,res)=>{
 
 app.use('/api/auth', authRoutes)
 app.use('/api/auth', authRoutes)
+
+
+app.use('/api/capsules',capsuleRoutes)
 
 
