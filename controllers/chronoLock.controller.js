@@ -20,7 +20,16 @@ const createCapsule = async (req,res)=>{
 
 const getCapsule = async (req,res)=>{
     try {
-        const capsules = await Capsule.find({owner:req.user.userId});
+        const capsules = await Capsule.find({
+            $and: [{ owner:req.user.userId }, {revealDate: {$lte: new Date()} } ]
+        });
+
+        if (capsules.length === 0) {
+            return res.status(200).json({
+                message: "no accessible capsules found",
+                capsules: []
+            });
+        }
         res.status(200).json(capsules);
     } 
     catch (error) {
