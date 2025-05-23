@@ -3,6 +3,8 @@ const app = express()
 const dotenv= require('dotenv')
 const mongoose=require('mongoose')
 
+const authRoutes = require('./routes/authRoutes')
+
 
 dotenv.config()
 const PORT = process.env.PORT || 3000;
@@ -34,5 +36,7 @@ mongoose
 app.get('/', (req,res)=>{
     res.send('server is running');
 })
+
+app.use('/api/auth', authRoutes)
 
 
