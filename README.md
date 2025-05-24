@@ -1,14 +1,12 @@
-## ChronoLOCK
+# ChronoLOCK
 
 - mongoDB, Express, Node
 - jwt, bcrypt
 - multer - handling media uploads/ file uploads
--  
+- node-cron to run daily. 
 
 
-
-
-## upcoming
+## Roadmap
 - [x] implement auth, both signup and login.
 - [x] jwt
 - [x] implement all capsule routes.
@@ -19,6 +17,6 @@
 - [ ] more frontend features.
 
 
-### future  
-[ ] capsule sharing.
-[ ] notifications. 
+## future  
+- [ ] capsule sharing.
+- [ ] notifications. 
