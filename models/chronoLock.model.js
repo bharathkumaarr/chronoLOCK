@@ -22,6 +22,10 @@ const capsuleSchema = mongoose.Schema(
         createdDate: {
             type: Date,
             default: Date.now
+        },
+        media: {
+            type: String,
+            default: null
         }
     }
 )

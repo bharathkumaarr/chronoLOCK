@@ -3,11 +3,13 @@ const Capsule = require('../models/chronoLock.model.js')
 const createCapsule = async (req,res)=>{
     try {
         const {title, content, revealDate} = req.body;
+        const mediaPath = req.file ? req.file.path :null
 
         const capsule = await Capsule.create({
             title,
             content,
             revealDate,
+            media: mediaPath,
             owner: req.user.userId
         });
 
@@ -44,6 +46,10 @@ const updateCapsule = async (req,res)=>{
         const capsuleId = req.params.id;
         const updates = req.body;
 
+        if (req.file && req.file.path) {
+            updates.media = req.file.path
+        }
+
         const updatedCapsule = await Capsule.findOneAndUpdate(
             {_id: capsuleId, owner: req.user.userId},
             updates,
@@ -59,6 +65,8 @@ const updateCapsule = async (req,res)=>{
         res.status(500).json({message: 'failed to update capsule', error: error.message})
     }
 }
+
+
 
 
 
