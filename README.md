@@ -12,7 +12,7 @@
 - [x] implement all capsule routes.
 - [x] revealDate logic.
 - [x] implement optional media file upload functionality for content uploads.
-- [ ] implement notification system.
+- [x] implement notification system.
 - [ ] frontend
 - [ ] more frontend features.
 

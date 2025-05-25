@@ -2,9 +2,11 @@ const express = require('express');
 const app = express()
 const dotenv= require('dotenv')
 const mongoose=require('mongoose')
+const cron = require('node-cron')
 
 const authRoutes = require('./routes/authRoutes')
 const capsuleRoutes = require('./routes/chronoLock.routes')
+const {checkRevealDates} = require('./services/notificationService')
 
 
 dotenv.config()
@@ -34,6 +36,11 @@ mongoose
         process.exit(1)
     })
 
+
+cron.schedule('0 0 * * *', checkRevealDates);
+
+
+
 app.get('/', (req,res)=>{
     res.send('server is running');
 })
@@ -42,6 +49,8 @@ app.use('/api/auth', authRoutes)
 app.use('/api/auth', authRoutes)
 
 
+
 app.use('/api/capsules',capsuleRoutes)
 
 
+// checkRevealDates();
