@@ -51,6 +51,7 @@ app.use('/api/auth', authRoutes)
 
 
 app.use('/api/capsules',capsuleRoutes)
+app.use('/api/capsules', capsuleRoutes)
 
 
 // checkRevealDates();

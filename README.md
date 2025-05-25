@@ -18,5 +18,5 @@
 
 
 ## future  
-- [ ] capsule sharing.
+- [x] capsule sharing.
 - [ ] notifications. 

@@ -26,7 +26,23 @@ const capsuleSchema = mongoose.Schema(
         media: {
             type: String,
             default: null
+        },
+        sharedWith: {
+            type: [{
+                type: mongoose.Schema.Types.ObjectId, ref: 'User'
+            }],
+            default: []
+        },
+        notified: {
+            type: Boolean,
+            default: false
+        },
+        opened: {
+            type: Boolean,
+            default: false
         }
+    }, {
+        timestamps: true
     }
 )
 
