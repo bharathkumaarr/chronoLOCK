@@ -4,7 +4,7 @@
 - jwt, bcrypt
 - multer - handling media uploads/ file uploads
 - node-cron to run daily. 
-
+- nodemailer
 
 ## Roadmap
 - [x] implement auth, both signup and login.
@@ -19,4 +19,4 @@
 
 ## future  
 - [x] capsule sharing.
-- [ ] notifications. 
+- [x] Email notifications. 
