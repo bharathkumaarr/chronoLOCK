@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+@import 'pixel-retroui/dist/index.css';
+@import 'pixel-retroui/dist/fonts.css'; */
+
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
