@@ -3,6 +3,7 @@ const app = express()
 const dotenv= require('dotenv')
 const mongoose=require('mongoose')
 const cron = require('node-cron')
+const cors = require('cors');
 
 const authRoutes = require('./routes/authRoutes')
 const capsuleRoutes = require('./routes/chronoLock.routes')
@@ -12,7 +13,7 @@ const {checkRevealDates} = require('./services/notificationService')
 dotenv.config()
 const PORT = process.env.PORT || 3000;
 
-
+app.use(cors({origin:'http://localhost:5173', credentials:true}))
 app.use(express.json())
 // const connectDB= async()=>{
     // try {
