@@ -34,11 +34,13 @@
 
 import React from 'react'
 import Landing from './components/Landing'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
     <div>
-      <Landing />
+      {/* <Landing /> */}
+      <Dashboard />
       
     </div>
   )
