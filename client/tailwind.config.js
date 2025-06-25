@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     extend: {fontFamily: {
-        custom: ['Gilroy-Regular', 'sans-serif'],
+        custom: ['Italiana', 'sans-serif'],
       },
     },
   },
