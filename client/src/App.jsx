@@ -39,8 +39,8 @@ import Dashboard from './components/Dashboard'
 function App() {
   return (
     <div>
-      {/* <Landing /> */}
-      <Dashboard />
+      <Landing />
+      {/*<Dashboard />*/}
       
     </div>
   )
